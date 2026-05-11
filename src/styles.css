@@ -1,0 +1,433 @@
+:root {
+  color: #16201c;
+  background: #edf1ee;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+.appShell {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.workspace {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.topBar,
+.paneHeader,
+.modelHeader,
+.skillRow > div {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.topBar {
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  color: #56615c;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  color: #101815;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.scenarioTabs {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 14px;
+}
+
+.scenarioTabs button,
+.ghostButton,
+.primaryButton {
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 800;
+  gap: 8px;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 14px;
+}
+
+.scenarioTabs button {
+  background: #dce5df;
+  color: #26312c;
+}
+
+.scenarioTabs button.active {
+  background: #18352c;
+  color: #ffffff;
+}
+
+.ghostButton {
+  background: #ffffff;
+  color: #1e2b26;
+}
+
+.mainGrid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(0, 1.18fr) minmax(340px, 0.82fr);
+}
+
+.codePane,
+.renderPane,
+.tutorPane {
+  background: #ffffff;
+  border: 1px solid #d5ddd8;
+  border-radius: 8px;
+}
+
+.codePane {
+  min-height: calc(100vh - 150px);
+  padding: 20px;
+}
+
+.sideStack {
+  display: grid;
+  gap: 14px;
+  grid-template-rows: minmax(300px, auto) 1fr;
+}
+
+.renderPane,
+.tutorPane {
+  padding: 18px;
+}
+
+.compact {
+  margin-bottom: 16px;
+}
+
+.focusPill {
+  background: #fff1ca;
+  border: 1px solid #e0c66d;
+  border-radius: 999px;
+  color: #5c4610;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 6px 10px;
+  white-space: nowrap;
+}
+
+.prompt {
+  color: #2d3a34;
+  font-size: 1rem;
+  margin: 16px 0;
+}
+
+.codeBlock,
+.answerBlock {
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0;
+  overflow-x: auto;
+  padding: 16px;
+}
+
+.codeBlock {
+  background: #121714;
+  color: #e8fff4;
+}
+
+.answerBlock {
+  background: #f2f6f3;
+  border: 1px solid #d9e3dc;
+  color: #14201b;
+  margin-top: 14px;
+}
+
+.choiceGroup {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.choiceItem {
+  align-items: center;
+  background: #f7faf8;
+  border: 1px solid #d7e0da;
+  border-radius: 8px;
+  color: #22312b;
+  cursor: pointer;
+  display: flex;
+  font-weight: 750;
+  gap: 10px;
+  min-height: 50px;
+  padding: 12px;
+}
+
+.choiceItem.selected {
+  background: #e4f2ec;
+  border-color: #4f9c78;
+}
+
+.choiceItem input {
+  accent-color: #24684e;
+  height: 18px;
+  width: 18px;
+}
+
+.primaryButton {
+  background: #24684e;
+  color: #ffffff;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.primaryButton:disabled {
+  background: #abb7b1;
+  cursor: not-allowed;
+}
+
+.timeline {
+  counter-reset: timeline;
+  display: grid;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline li {
+  align-items: center;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 34px 1fr;
+}
+
+.timeline span {
+  align-items: center;
+  background: #18352c;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-flex;
+  font-size: 0.9rem;
+  font-weight: 900;
+  height: 34px;
+  justify-content: center;
+  width: 34px;
+}
+
+.timeline p {
+  background: #f5f8f6;
+  border: 1px solid #dce4df;
+  border-radius: 8px;
+  margin-bottom: 0;
+  padding: 10px 12px;
+}
+
+.tutorPane {
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.glow-preview {
+  border-color: #d5b33e;
+  box-shadow: 0 0 0 4px rgba(232, 192, 58, 0.18);
+}
+
+.glow-warning {
+  border-color: #c7563f;
+  box-shadow: 0 0 0 4px rgba(199, 86, 63, 0.16);
+}
+
+.glow-success {
+  border-color: #328d62;
+  box-shadow: 0 0 0 4px rgba(50, 141, 98, 0.16);
+}
+
+.feedbackBox {
+  align-items: flex-start;
+  background: #f7faf8;
+  border: 1px solid #dce4df;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 24px 1fr;
+  margin-bottom: 18px;
+  padding: 14px;
+}
+
+.feedbackBox p {
+  margin-bottom: 0;
+}
+
+.hintIcon {
+  color: #996d00;
+}
+
+.warningIcon {
+  color: #bc3e2d;
+}
+
+.successIcon {
+  color: #2c815a;
+}
+
+.studentModel {
+  border-top: 1px solid #dce4df;
+  padding-top: 16px;
+}
+
+.modelHeader span {
+  color: #56615c;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.skillList {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.skillRow span {
+  color: #394640;
+  font-size: 0.9rem;
+}
+
+.skillRow strong {
+  color: #16201c;
+  font-size: 0.9rem;
+}
+
+progress {
+  appearance: none;
+  height: 10px;
+  width: 100%;
+}
+
+progress::-webkit-progress-bar {
+  background: #e3e9e5;
+  border-radius: 999px;
+}
+
+progress::-webkit-progress-value {
+  background: #2f7f5f;
+  border-radius: 999px;
+}
+
+progress::-moz-progress-bar {
+  background: #2f7f5f;
+  border-radius: 999px;
+}
+
+.flagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.flag {
+  background: #edf2ef;
+  border: 1px solid #d6ded9;
+  border-radius: 999px;
+  color: #56615c;
+  font-size: 0.78rem;
+  font-weight: 850;
+  padding: 6px 9px;
+}
+
+.flag.active {
+  background: #ffe6df;
+  border-color: #e58c78;
+  color: #863522;
+}
+
+@media (max-width: 960px) {
+  .appShell {
+    padding: 14px;
+  }
+
+  .topBar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .codePane {
+    min-height: auto;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .scenarioTabs {
+    grid-template-columns: 1fr;
+  }
+
+  .paneHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .focusPill {
+    white-space: normal;
+  }
+}
